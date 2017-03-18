@@ -1,0 +1,2 @@
+class IExpression:
+    pass

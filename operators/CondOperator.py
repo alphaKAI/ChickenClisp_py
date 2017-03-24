@@ -9,4 +9,4 @@ class CondOperator(IOperator):
       if (engine.eval(pred) or pred == "else"):
         return engine.eval(expr)
 
-      return None
+    return None

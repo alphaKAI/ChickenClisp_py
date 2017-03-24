@@ -43,6 +43,7 @@ from operators.WhenOperator import WhenOperator
 from operators.IsListOperator import IsListOperator
 from operators.RemoveOperator import RemoveOperator
 
+
 class Engine:
     def __init__(self):
         self.variables = {}
@@ -55,45 +56,45 @@ class Engine:
         self.variables["="] = EqualOperator()
         self.variables["<"] = LessOperator()
         self.variables[">"] = GreatOperator()
-        self.variables["<="]  = LEqOperator()
-        self.variables[">="]  = GEqOperator()
+        self.variables["<="] = LEqOperator()
+        self.variables[">="] = GEqOperator()
         self.variables["set"] = SetOperator()
         self.variables["get"] = GetOperator()
         self.variables["until"] = UntilOperator()
-        self.variables["step"]  = StepOperator()
+        self.variables["step"] = StepOperator()
         self.variables["if"] = IfOperator()
-        self.variables["!"]  = NotOperator()
-        self.variables["not"]  = self.variables["!"]
+        self.variables["!"] = NotOperator()
+        self.variables["not"] = self.variables["!"]
         self.variables["&&"] = AndOperator()
-        self.variables["and"]  = self.variables["&&"]
+        self.variables["and"] = self.variables["&&"]
         self.variables["||"] = OrOperator()
-        self.variables["or"]  = self.variables["||"]
+        self.variables["or"] = self.variables["||"]
         self.variables["print"] = PrintOperator()
         self.variables["println"] = PrintlnOperator()
-        self.variables["def"]   = DeffunOperator()
+        self.variables["def"] = DeffunOperator()
         self.variables["while"] = WhileOperator()
         self.variables["get-fun"] = GetfunOperator()
-        self.variables["lambda"]  = LambdaOperator()
-        self.variables["map"]     = MapOperator()
+        self.variables["lambda"] = LambdaOperator()
+        self.variables["map"] = MapOperator()
         self.variables["set-idx"] = SetIdxOperator()
-        self.variables["as-iv"]   = AsIVOperator()
+        self.variables["as-iv"] = AsIVOperator()
         self.variables["def-var"] = DefvarOperator()
-        self.variables["seq"]     = SeqOperator()
-        self.variables["fold"]    = FoldOperator()
-        self.variables["length"]  = LengthOperator()
-        self.variables["car"]     = CarOperator()
-        self.variables["cdr"]     = CdrOperator()
-        self.variables["load"]    = LoadOperator()
-        self.variables["cond"]    = CondOperator()
-        self.variables["alias"]   = AliasOperator()
-        self.variables["cons"]    = ConsOperator()
+        self.variables["seq"] = SeqOperator()
+        self.variables["fold"] = FoldOperator()
+        self.variables["length"] = LengthOperator()
+        self.variables["car"] = CarOperator()
+        self.variables["cdr"] = CdrOperator()
+        self.variables["load"] = LoadOperator()
+        self.variables["cond"] = CondOperator()
+        self.variables["alias"] = AliasOperator()
+        self.variables["cons"] = ConsOperator()
         self.variables["for-each"] = ForeachOperator()
-        self.variables["let"]      = LetOperator()
-        self.variables["when"]     = WhenOperator()
-        self.variables["list?"]    = IsListOperator()
-        self.variables["remove"]    = RemoveOperator()
+        self.variables["let"] = LetOperator()
+        self.variables["when"] = WhenOperator()
+        self.variables["list?"] = IsListOperator()
+        self.variables["remove"] = RemoveOperator()
 
-        self.super_ = None 
+        self.super_ = None
 
     def clone(self):
         newEngine = Engine()
@@ -121,7 +122,6 @@ class Engine:
                 engine = engine.super_
             else:
                 return engine.defineVariable(name, value)
-
 
     def getVariable(self, name):
         engine = self

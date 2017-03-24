@@ -5,6 +5,7 @@ import re
 comment_rgx = re.compile(".*;.*")
 newline_rgx = re.compile("\n")
 
+
 class Transpiler:
     """
     Transpiler

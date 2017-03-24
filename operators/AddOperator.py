@@ -1,5 +1,6 @@
 from operators.IOperator import IOperator
 
+
 class AddOperator(IOperator):
     def call(self, engine, args):
         ret = 0

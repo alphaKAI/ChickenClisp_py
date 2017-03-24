@@ -1,5 +1,6 @@
 from operators.IOperator import IOperator
 
+
 class PrintlnOperator(IOperator):
     def call(self, engine, args):
         for arg in args:

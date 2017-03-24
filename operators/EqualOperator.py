@@ -1,6 +1,6 @@
 from operators.IOperator import IOperator
 
-class EqualOperator(IOError):
+class EqualOperator(IOperator):
   def call(self, engine, args):
     return engine.eval(args[0]) == engine.eval(args[1])
 

@@ -110,7 +110,7 @@ class Engine:
 
         return value
 
-    def setVarable(self, name, value):
+    def setVariable(self, name, value):
         engine = self
 
         while True:

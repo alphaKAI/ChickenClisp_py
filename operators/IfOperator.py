@@ -3,11 +3,14 @@ from operators.IOperator import IOperator
 
 class IfOperator(IOperator):
     def call(self, engine, args):
-        idx = 0
+        ret = None
 
         if engine.eval(args[0]):
-            idx = 1
+            ret = engine.eval(args[1])
         else:
-            idx = 2
+            if len(args) != 3:
+                ret = None
+            else:
+                ret = engine.eval(args[2])
 
-        return engine.eval(args[idx])
+        return ret

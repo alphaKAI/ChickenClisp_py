@@ -15,9 +15,9 @@ class LetOperator(IOperator):
             vars_ = []
 
             for bind in binds:
-                name = bind[0]
+                bname = bind[0]
                 val = bind[1]
-                names.append(name)
+                names.append(bname)
                 vars_.append(val)
 
             _engine.defineVariable(name, DynamicOperator(names, body))

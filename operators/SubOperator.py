@@ -6,7 +6,7 @@ class SubOperator(IOperator):
         ret = engine.eval(args[0])
 
         for arg in args[1:]:
-            v = engine.eval[arg]
+            v = engine.eval(arg)
             ret -= v
 
         return ret

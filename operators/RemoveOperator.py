@@ -9,7 +9,7 @@ class RemoveOperator(IOperator):
         ret = []
 
         for elem in eargs1:
-            cnd = false
+            cnd = False
 
             if isinstance(efunc, Closure):
                 cnd = efunc.eval([elem])

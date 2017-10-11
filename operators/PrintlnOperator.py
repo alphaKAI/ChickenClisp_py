@@ -9,7 +9,7 @@ class PrintlnOperator(IOperator):
                 obj = arg
 
             if isinstance(obj, list):
-                print("(", obj.join(" "), ")", end="")
+                print("(", " ".join(map(lambda x: str(x), obj)), ")", end="")
             else:
                 print(obj, end='')
 

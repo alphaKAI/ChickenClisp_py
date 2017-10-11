@@ -13,9 +13,9 @@ if len(args) == 1:
     if not (os.path.exists(fpath)):
         print("No such file - ", fpath)
     else:
-        engine = Engine()
+        itpr = Interpreter()
 
-        engine.eval(Transpiler.transpile(open(fpath).read()))
+        itpr.executer(open(fpath).read())
 
 elif len(args) == 0:
     itpr = Interpreter()
